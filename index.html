@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio Website</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link rel="stylesheet" href="portfolio style.css">
+      <script> src= "https://code.jquery.com/jquery-3.6.4.js"</script>
+</head>
+<body>
+    <section class="header" id="header">
+
+        <h1 class="h1">
+            Mark Wisdom
+        </h1>    
+         <img src="photos/bison.jpg" alt="Profile image">
+    </section>   
+    
+         <!---------Navigation bar----------->
+         <nav>
+            <h2>My Portfolio Website</h2>
+            <a href="index.html"></a>
+            
+           <div class="nav-links" id="navLinks">
+            
+
+           <ul>
+            
+             <li><a href="#header" id="h"><i class="fa-solid fa-house"></i> HOME</a></li>
+             <li><a href="#about" id="a"><i class="fa-solid fa-user"></i> ABOUT</a></li>
+             <li><a href="#services" id="s"><i class="fa-solid fa-briefcase"></i> SERVICES</a></li>
+             <li><a href="#contact" id="c"><i class="fa-solid fa-phone"></i> CONTACT</a></li>
+             </div>
+           </ul>
+            
+          </nav>
+
+    
+
+    <section class="intro reveal">
+    <h1>
+      Hello !
+      <br> Pleasure to have you here.
+    </h1>
+    </section>
+
+
+    <section class="about reveal" id="about">
+      <h2>ABOUT</h2>
+      <h3>
+        
+        My name is Mark Wisdom, I am a passionate web developer. I believe that creativity and innovation are 
+        the keys to success in the Tech industry and I strive to incorporate those principles into every
+        project I work on.
+        With a keen eye for detail and a commitment to excellence, I am dedicated to delivering
+        high quality results that exceed expectations.
+         Whether you are looking for a website designer, a graphic designer or a content creator,
+        I am confident that I have the skills and expertise to bring your vision to life. 
+        <br> So take a look around, and let's get started on your next big project! 
+      </h3>
+    </section>
+
+    <section class="services reveal" id="services">
+      <h2>SERVICES</h2>
+      <h3>
+        As a web developer, I possess a robust skill set that includes proficiency in the 
+        latest web development technologies such as HTML, CSS and JavaScript. I am constantly 
+        expanding my knowledge base by staying up-to-date with the latest trends and advances in the 
+        industry. With each passing day, I am adding new skills and techniques to my arsenal,
+        enabling me to deliver cutting-edge solutions that meet the unique needs of my clients.
+        Whether it's building a responsive website, developing an interactive user interface,
+        or creating engaging multimedia content, I have the expertise and the passion to 
+        bring your ideas to life.
+      </h3>
+    </section>
+       
+
+    <section class="contact reveal" id="contact"> 
+      <h2>CONTACT</h2>
+      <h3>Feel free to reach out to me</h3>
+          <h4 onclick="showbox()">Reach me</h4>
+      
+      <div class="socials">
+       <p> My socials</p>
+
+       <a href="https://www.facebook.com/mark.hekima.9" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/Bison1_KE" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://instagram.com/markhekima" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/mark-wisdom-419613257" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    
+      
+
+    </div>
+    <!---------------------------------Inquiry box--------------------------------------->
+                 <div  class="inquire-box" id="inquirybox">
+                 <span><i class="fa  fa-times" onclick="hidebox()"></i></span>
+                 <span><i class="fa  fa-times" onclick="hidebox()"></i></span>
+                  <form action ="form-handler.php" method ="post" class="inquire-form" >
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea rows="8" name="message" placeholder="Inquiry"></textarea>
+                    <button type="submit">Send</button>
+                  </form>
+                 </div>
+    </section>            
+
+    <section class="footer">
+    <h3>
+      Explore, dream, discover. Together let's turn your ideas into reality.
+    </h3> 
+    
+    
+     <br>
+     <h4>
+       COPYRIGHT &copy;  2023 Mark Wisdom. All Rights Reserved.       
+     </h4>
+
+    </section>
+
+
+  
+   <!----------------------------------Javascript for Navbar--------------------------->
+
+   
+   <script>
+     let navbar = document.querySelector("nav");
+     let scrollPrevious = window.pageYOffset;
+     window.onscroll = function(){
+      let scrollCurrent = window.pageYOffset;
+      if(scrollPrevious > scrollCurrent){
+        navbar.style.top = "0px";
+      }
+      else{
+        navbar.style.top = "-150px";
+      }
+      scrollPrevious = scrollCurrent;
+     }
+
+   </script> 
+
+         <!---------------------------javascript for inquiry option--------------------->
+
+         <script>
+
+          var inquirybox = document.getElementById("inquirybox");
+
+          function showbox(){
+           inquirybox.style.visibility = "visible";
+          }
+
+          function hidebox(){
+           inquirybox.style.visibility = "hidden";
+          }
+     </script>
+     
+     <!------------------------------Javascript for revealing elements on Scroll------------------------>
+
+     <script type="text/javaScript">
+         window.addEventListener('scroll', reveal);
+
+         function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+
+          for(var i = 0; i < reveals.length; i++){
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+
+              reveals[i].classList.add('active');
+            }
+            else{
+
+              reveals[i].classList.remove('active');
+            }
+          }
+         }
+     </script>
+
+     <script>
+      const span= document.querySelector('.fa.fa-times');
+
+      span.addEventListener('click', () =>{
+        span.classList.toggle('active');
+      });
+     </script>
+</body>
+</html>

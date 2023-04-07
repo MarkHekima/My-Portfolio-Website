@@ -1,0 +1,606 @@
+*{
+    padding:0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.1)),url(photos/sea);
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.header{
+  background-color: rgba(5,10,10,0.7);
+  min-height:80vh;
+  width:100%;
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  box-shadow: 10px 10px 25px silver;
+  padding: 200px 20px;
+  
+}
+
+.h1{
+    position:absolute;
+    top: 35vh;
+    left: 60vh;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: 250px;
+    display: flex;
+  
+  }
+  img{
+    position: absolute;
+    top: 20vh;
+    left: 5vh;
+   border: 1px solid black;
+   border-radius: 2000px;
+   height: 700px;
+   width: 500px;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.7);
+  }
+
+/*-----------------Navigation bar----------------------------------*/ 
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(7, 220, 248,0.2);
+    box-shadow: 10px 10px 25px silver;
+    z-index: 4;
+    transition: top 0.3s;
+  }
+
+  nav h2{
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    letter-spacing: 5px;
+    left: 70px;
+    display:flex;
+  }
+  
+  
+  .nav-links{
+    flex: 1;
+    text-align: right;
+    height: 50px;
+    transition: 0;
+    
+  }
+  
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .nav-links div{
+    display:inline-block;
+    position:absolute;
+    left: 0%;
+    padding: 15px;
+    font-size: 20px;
+    color:darkred;
+  }
+  
+  
+  .nav-links ul{
+    /* position:relative; */
+    top:-10px;
+    padding: 15px 20px;
+    width: 100%;
+    right: -105px;
+    
+  }
+  
+  .nav-links ul li{
+    display: inline-block;
+  }
+  
+  .nav-links ul li a{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding:25px;
+    margin-top:10vh;
+    text-decoration: none;
+    text-decoration-line: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    
+  }
+  .nav-links ul li::after{
+  
+    content: "";
+    width:0%;
+    height:6px;
+    background: blue;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  
+  }
+  #h:active{
+    color: blue;  
+  }
+  #a:active{
+    color: blue;
+  }
+  #s:active{
+    color: blue;
+  }
+  #c:active{
+    color: blue;
+  }
+  
+  .nav-links ul li:hover::after{
+  
+    width: 100%;
+  }
+
+  .reveal{
+    position:relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .h1{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    letter-spacing: 5px;
+  }
+
+
+  .intro{
+    color: rgba(245, 245, 245, 0.726);
+    text-align: center;
+    background-color:rgba(5,5,10,0.6);
+    padding: 300px 30px;
+    font-family: 'Roboto Slab', serif; 
+    border-bottom: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
+  .intro h1{
+    font-size: 130px;
+    font-weight:800;
+    letter-spacing: 10px;  
+  }
+
+  .about{
+    color: rgba(245, 245, 245, 0.726);
+    text-align: center;
+    background-color:rgba(5,5,10,0.6);
+    padding: 200px 30px;
+    font-family: 'Roboto Slab', serif; 
+    border-bottom: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
+  .about h2{
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .about h3{
+    font-size: 40px;
+    font-weight:100;
+    padding: 50px;
+  }
+
+  .services{
+    color: rgba(245, 245, 245, 0.726);
+    text-align: center;
+    background-color:rgba(5,5,10,0.6);
+    padding: 200px 30px;
+    font-family: 'Roboto Slab', serif; 
+    border-bottom: 8px solid #bbb;
+    border-radius: 5px;
+  }
+
+  .services h2{
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .services h3{
+    font-size: 40px;
+    font-weight:100;
+    padding: 50px;
+    
+  }
+  
+  .contact{
+    color: rgba(245, 245, 245, 0.726);
+    text-align: center;
+    background-color:rgba(5,5,10,0.6);
+    padding: 200px 30px 0px 30px;
+    font-family: 'Roboto Slab', serif; 
+    
+  }
+
+  .contact h2{
+    font-size: 60px;
+    font-weight: 700;
+  }
+
+  .contact h3{
+    font-size: 40px;
+    font-weight:100;
+    padding: 50px;
+    
+  }
+
+  .contact h4{
+    position: absolute;
+    width: 15%;
+    left: 42.5%;
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 5px;
+    border: 5px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    box-shadow: 1px 7px 5px silver;
+    cursor: pointer;
+  }
+
+  .contact h4:hover{
+    background: rgba(0,0,0,0.4) ;
+    transition:  0.3s;
+  }
+   
+  .inquire-box{
+    position: relative;
+    top: -200px;
+    width: 50%;
+    left:25%;
+    border: 5px solid rgba( 0,0,0,0.6);
+    border-radius: 20px;
+    box-shadow:1px 5px 7px 3px silver;
+    padding: 30px 20px;
+    z-index: 2;
+    visibility: hidden;
+    cursor: pointer;
+    transition: 0s;
+  }
+
+  .socials{
+    font-size: 50px;
+    font-weight: 700;
+    position:relative;
+    top: 300px;
+  }
+
+   .fa-brands{
+    position: relative;
+    top: 70px;
+    display: inline;
+    padding: 40px;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    color: white;
+  
+  }
+   a{
+    text-decoration-line: none;
+  }
+  
+  .fa-brands:hover{
+  
+    color: blue;
+    transition: 0.7s;
+  
+  }
+
+  .inquire-box:hover{
+    background: rgba(0,0,0,0.4);
+    transition:0.4s; 
+  }
+  
+  .inquire-box input,  .inquire-box textarea{
+
+    width: 70%;
+    padding: 30px;
+    font-size: 30px;
+    margin-top: 2%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-left:15%;
+    margin-right:15%;
+    border-radius: 15px;
+    outline: none;
+    background: #f0f0f0;
+    transition: 0s;
+  }
+  
+   .inquire-box textarea:hover{
+  
+    border: 3px solid white;
+    box-shadow: 7px solid white;
+    transition: 0.3s;
+  }
+  
+  .inquire-box input:hover{
+  
+    border: 2px solid white;
+    box-shadow: 5px solid white;
+    transition: 0,3s;
+  
+  
+  }
+  .inquire-box button{
+    
+    width: 20%;
+    padding: 7px;
+    font-size: 30px;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+    transition: 0s;
+  }
+  
+  .inquire-box button:hover{
+    color: white;
+    box-shadow: 1px 3px 4px silver;
+    background: rgba(0,0,0,0.4);
+    transition: 0.4s;
+  }
+
+  .fa.fa-times{
+    position:absolute;
+    right: 1.5%;
+    font-size: 40px;
+    cursor: pointer;
+    top: 0px;
+    
+  }
+
+ 
+  span:nth-child(1){
+    transform: translate(-50%,-50%) rotate(45deg);
+  
+  }
+
+  span:nth-child(2){
+    transform: translate(-50%,-50%) rotate(45deg);
+  
+  }
+
+  .footer{
+    background-color: rgba(5,10,10,0.8);
+    text-align: center;
+    padding: 200px 30px 20px 30px;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 20px 0px 25px silver;
+    color: #bbb;
+}
+
+.footer h3{
+  font-size: 35px; 
+  font-style: italic;
+}
+
+.footer h4{
+  text-decoration:underline;
+  padding-top: 100px;
+}
+
+
+  /*----------------------------------------MEDIA QUERIES------------------------------------------------------*/
+
+@media(max-width: 1300px){
+  *{
+    margin: 0;
+    padding:0;
+  }
+
+  .header{
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    box-shadow:5px 5px 10px silver;
+  }
+ 
+   .header .h1{
+    font-size:17px;
+    left: 50%;
+     top: 50%;
+    
+    
+   }
+   .header img{
+     width: 30%;
+     height: 40%;
+     left: 10%;
+     top: 35%;
+   }
+ 
+   nav{
+    width: 100vw;
+     height: 8%;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px;
+   }
+ 
+   nav h2{
+     font-size: 10px;
+     letter-spacing: 1px;
+     left: 2%;
+     padding: 0;
+     padding-top: 22px;
+     position: relative;
+   }
+ 
+   .nav-links{
+     position: relative;
+     width: fit-content;
+     padding: 0px;
+     display: flex;
+   }
+ 
+   .nav-links ul{
+     /* position: absolute; */
+     /* display: inline-flex; */
+     padding: 15px 5px;
+     right: 0px;
+   }
+
+   .nav-links ul li {
+    padding: 0px 4px;
+   }
+ 
+ 
+   .nav-links ul li a{
+     font-size: 7px;
+     /* margin: 10px 2px; */
+     padding: 0px;
+     
+   }
+
+   .fa-solid{
+    display: none;
+   }
+ 
+   .intro{
+     padding: 80px 30px;
+     border-bottom: 2px solid #bbb;
+   }
+ 
+   
+   .intro h1{
+     font-size: 25px;
+     letter-spacing: 1px;
+   }
+ 
+   .about{
+     padding: 70px 5px;
+     border-bottom: 2px solid #bbb;
+   }
+   .about h2{
+     font-size: 20px;
+   }
+   .about h3{
+     font-size: 17px;
+     text-align:justify;
+   
+   }
+ 
+    .services{
+     padding: 70px 5px;
+     border-bottom: 2px solid #bbb;
+     
+   }
+   .services h2{
+     font-size: 20px;
+   }
+   .services h3{
+     font-size: 17px;
+     text-align:justify;
+ }
+ 
+   .contact{
+     padding: 70px 5px 0px 5px;
+     min-height: 80vh;
+   }
+   .contact h2{
+     font-size: 20px;
+ }
+   .contact h3{
+     font-size: 17px;
+   }
+   .contact h4{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    font-size: 15px;
+    text-align: center;  
+    padding: 10px 7px;
+    box-shadow: 1px 3px 2px silver;
+    border: 1px solid black;
+    border-radius: 10px;
+
+  }
+
+  .socials{
+    width: 60%;
+    position: absolute;
+    margin-top: 22%;
+    font-size: 25px;
+    left: 20%;  
+  }
+
+  .socials .fa-brands{
+    display:inline;
+    font-size: 20px;
+    padding:15px;
+    top: 10%;
+  }
+
+  .inquire-box{
+    width: 80%;
+    left: 10%;
+  
+  
+  }
+
+  .inquire-box input, .inquire-box textarea{
+    font-size: 15px;
+    padding: 10px;
+    width: 90%;
+    margin: 5px 5%;
+    border-radius: 7px;
+  }
+
+  .inquire-box button{
+    font-size: 15px;
+    width: 30%;
+    margin: 1px 35%;
+    border-radius: 5px;
+  }
+
+  .fa.fa-times{
+    position: absolute;
+    margin-top: 3px;
+    margin-right: 5px;
+    font-size: 25px; 
+  }
+
+  .footer{
+    padding: 20px;
+  }
+
+  .footer h3{
+    font-size: 25px;
+  }
+
+  .footer h4{
+    font-size: 13px
+  }
+
+ 
+  
+}
