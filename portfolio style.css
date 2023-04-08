@@ -5,7 +5,7 @@
 }
 
 body{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.1)),url(photos/sea);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0,0,0,0.1)),url(sea);
   background-position:center;
   background-size:cover;
   background-repeat: no-repeat;
