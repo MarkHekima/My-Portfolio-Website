@@ -2,6 +2,7 @@
     padding:0;
     margin: 0;
     scroll-behavior: smooth;
+    color:aliceblue;
 }
 
 body{
@@ -181,7 +182,8 @@ nav{
   .intro h1{
     font-size: 130px;
     font-weight:800;
-    letter-spacing: 10px;  
+    letter-spacing: 5px;
+    color:  aliceblue;  
   }
 
   .about{
@@ -197,12 +199,23 @@ nav{
   .about h2{
     font-size: 60px;
     font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
   }
 
   .about h3{
     font-size: 40px;
     font-weight:100;
     padding: 50px;
+  }
+
+  #about i.fa-solid{
+    font-size: 70px;
+    margin-right: 10px;
+    color:aliceblue;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .services{
@@ -218,6 +231,9 @@ nav{
   .services h2{
     font-size: 60px;
     font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
   }
 
   .services h3{
@@ -226,6 +242,14 @@ nav{
     padding: 50px;
     
   }
+
+  #services i.fa-solid{
+    font-size: 70px;
+    color:aliceblue;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  } 
   
   .contact{
     color: rgba(245, 245, 245, 0.726);
@@ -236,9 +260,23 @@ nav{
     
   }
 
+  #contact i.fa-solid{
+    font-size: 70px;
+    color:aliceblue;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    
+    
+    
+  }
+
   .contact h2{
     font-size: 60px;
     font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
   }
 
   .contact h3{
@@ -347,7 +385,7 @@ nav{
   
   }
   .inquire-box button{
-    
+    color: black;
     width: 20%;
     padding: 7px;
     font-size: 30px;
@@ -399,8 +437,9 @@ nav{
 }
 
 .footer h3{
-  font-size: 35px; 
+  font-size: 65px; 
   font-style: italic;
+  font-family: 'Roboto Slab', serif;
 }
 
 .footer h4{
@@ -595,6 +634,8 @@ nav{
 
   .footer h3{
     font-size: 25px;
+    font-family: 'Roboto Slab', serif;
+
   }
 
   .footer h4{
