@@ -12,6 +12,12 @@
       <script> src= "https://code.jquery.com/jquery-3.6.4.js"</script>
 </head>
 <body>
+
+
+  <!--------------------Linking the external JS file------------------->
+
+  <script src="portfolio javascript.js"></script>
+  
     <section class="header" id="header">
 
         <h1 class="h1">
@@ -111,68 +117,68 @@
 
    
    <script>
-     let navbar = document.querySelector("nav");
-     let scrollPrevious = window.pageYOffset;
-     window.onscroll = function(){
-      let scrollCurrent = window.pageYOffset;
-      if(scrollPrevious > scrollCurrent){
-        navbar.style.top = "0px";
-      }
-      else{
-        navbar.style.top = "-150px";
-      }
-      scrollPrevious = scrollCurrent;
+    let navbar = document.querySelector("nav");
+    let scrollPrevious = window.pageYOffset;
+    window.onscroll = function(){
+     let scrollCurrent = window.pageYOffset;
+     if(scrollPrevious > scrollCurrent){
+       navbar.style.top = "0px";
      }
+     else{
+       navbar.style.top = "-150px";
+     }
+     scrollPrevious = scrollCurrent;
+    }
 
-   </script> 
+  </script> 
 
-         <!---------------------------javascript for inquiry option--------------------->
+        <!---------------------------javascript for inquiry option--------------------->
 
-         <script>
+        <script>
 
-          var inquirybox = document.getElementById("inquirybox");
+         var inquirybox = document.getElementById("inquirybox");
 
-          function showbox(){
-           inquirybox.style.visibility = "visible";
-          }
-
-          function hidebox(){
-           inquirybox.style.visibility = "hidden";
-          }
-     </script>
-     
-     <!------------------------------Javascript for revealing elements on Scroll------------------------>
-
-     <script type="text/javaScript">
-         window.addEventListener('scroll', reveal);
-
-         function reveal(){
-          var reveals = document.querySelectorAll('.reveal');
-
-          for(var i = 0; i < reveals.length; i++){
-
-            var windowheight = window.innerHeight;
-            var revealtop = reveals[i].getBoundingClientRect().top;
-            var revealpoint = 150;
-
-            if(revealtop < windowheight - revealpoint){
-
-              reveals[i].classList.add('active');
-            }
-            else{
-
-              reveals[i].classList.remove('active');
-            }
-          }
+         function showbox(){
+          inquirybox.style.visibility = "visible";
          }
-     </script>
 
-     <script>
-      const span= document.querySelector('.fa.fa-times');
+         function hidebox(){
+          inquirybox.style.visibility = "hidden";
+         }
+    </script>
+    
+    <!------------------------------Javascript for revealing elements on Scroll------------------------>
 
-      span.addEventListener('click', () =>{
-        span.classList.toggle('active');
-      });
-     </script>
+    <script type="text/javaScript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+         var reveals = document.querySelectorAll('.reveal');
+
+         for(var i = 0; i < reveals.length; i++){
+
+           var windowheight = window.innerHeight;
+           var revealtop = reveals[i].getBoundingClientRect().top;
+           var revealpoint = 150;
+
+           if(revealtop < windowheight - revealpoint){
+
+             reveals[i].classList.add('active');
+           }
+           else{
+
+             reveals[i].classList.remove('active');
+           }
+         }
+        }
+    </script>
+
+    <script>
+     const span= document.querySelector('.fa.fa-times');
+
+     span.addEventListener('click', () =>{
+       span.classList.toggle('active');
+     });
+    </script>
 </body>
 </html>
