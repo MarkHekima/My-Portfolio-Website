@@ -12,6 +12,7 @@ body{
   background-repeat: no-repeat;
 }
 
+
 .header{
   background-color: rgba(5,10,10,0.7);
   min-height:80vh;
@@ -132,16 +133,13 @@ nav{
     transition: 0.5s;
   
   }
-  #h:active{
-    color: blue;  
-  }
-  #a:active{
+
+  
+
+  #a:visited{
     color: blue;
   }
-  #s:active{
-    color: blue;
-  }
-  #c:active{
+  #h:visited{
     color: blue;
   }
   
